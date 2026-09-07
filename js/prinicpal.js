@@ -1,0 +1,1 @@
+const bouton = document.getElementById("button_centre");

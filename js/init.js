@@ -1,0 +1,3 @@
+updateTaille();
+updateBorder();
+updateColor();

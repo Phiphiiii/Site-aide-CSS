@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button_css"> Copier CSS </button>
+
+    <div class="container">
+        <div class="box1">
+            
+            <!-- TAILLE -->
+            <details>
+                <summary>
+                    Taille
+                </summary>
+                <!-- WIDTH -->
+                <h3>Width</h3>
+                <input id="jauge_width" name="width" type="range" min="0" max="100" value="16">
+                <span id="valeur_width"></span>
+
+                <!-- HEIGHT -->
+                <h3>Height</h3>
+                <input id="jauge_height" name="height" type="range" min="0" max="100" value="6">
+                <span id="valeur_height"></span>
+            </details>
+
+            <!-- BORDER -->
+            <details>
+                <summary>
+                    Bordure global<input type="checkbox" id="border" name="border"/>
+                </summary>
+                <div>
+                    <div>
+                        <h3>Bordure de base</h3>
+                    </div>
+                    <div>
+                        <select id="type_border" name="border">
+                            <option value="solid">Solid</option>
+                            <option value="dashed">Dashed</option>
+                            <option value="dotted">Dotted</option>
+                            <option value="double">Double</option>
+                            <option value="groove">Groove</option>
+                            <option value="ridge">Ridge</option>
+                            <option value="inset">Inset</option>
+                            <option value="outset">Outset</option>
+                            <option value="none">None</option>
+                            <option value="hidden">Hidden</option>
+                        </select>
+                    </div>
+                    <input id="jauge_border" name="border" type="range" min="0" max="100" value="2">
+                    <br>
+                    <input type="color" id="border_color" name="border-color" value="#ff0000">
+                </div>
+                <div>
+                    <div>
+                        <h3>Bordure coin</h3>
+                    </div>
+                    <p>En haut à gauche <input id="border_radius_top_left" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                    <p>En haut à droite <input id="border_radius_top_right" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                    <p>En bas à droite <input id="border_radius_bottom_right" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                    <p>En bas à gauche <input id="border_radius_bottom_left" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                </div>
+            </details>
+
+            <!-- COLOR -->
+            <details>
+                <summary>
+                    Couleur
+                </summary>
+                <!-- WIDTH -->
+                <h3>Fond</h3>
+                <input type="color" id="background-color" name="background-color" value="#f2f2f2">
+
+                <!-- HEIGHT -->
+                <h3>Texte</h3>
+                <input type="color" id="text-color" name="color" value="black">
+            </details>
+        </div>
+
+        <div class="box2">
+            <button id="button_centre">Test</button>
+        </div>
+    </div>
+
+</body>
+<script src="./js/prinicpal.js"></script>
+<script src="./js/taille.js"></script>
+<script src="./js/border.js"></script>
+<script src="./js/color.js"></script>
+<script src="./js/copy.js"></script>
+<script src="./js/init.js"></script>
+</html>
