@@ -1,6 +1,7 @@
 const bouton = document.getElementById("button_centre");
 const action = document.getElementById("action");
 const hover = document.getElementById("hover");
+const active = document.getElementById("active");
 const action_show = document.getElementById("action_show");
 
 function actionShow() {

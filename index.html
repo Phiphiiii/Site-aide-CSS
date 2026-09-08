@@ -93,7 +93,7 @@
                 <!-- ACTION : SURVOLE -->
                 <details class="det_out">
                     <summary>
-                        Action : Survole <input type="radio" id="hover" name="hover"/>
+                        Action : Survole <input type="radio" id="hover" name="action"/>
                     </summary>
                     
                     <!-- TAILLE : HOVER -->
@@ -165,11 +165,85 @@
                     </details>
                 </details>
 
+                <!-- ACTION : CLIQUE -->
+                <details class="det_out">
+                    <summary>
+                        Action : Clique <input type="radio" id="active" name="action"/>
+                    </summary>
+                    
+                    <!-- TAILLE : CLIQUE -->
+                    <details class="det_in">
+                        <summary>
+                            Taille
+                        </summary>
+                        <!-- WIDTH -->
+                        <h3>Width</h3>
+                        <input id="jauge_width_active" name="width" type="range" min="0" max="100" value="16">
+                        <span id="valeur_width_active"></span>
+
+                        <!-- HEIGHT -->
+                        <h3>Height</h3>
+                        <input id="jauge_height_active" name="height" type="range" min="0" max="100" value="6">
+                        <span id="valeur_height_active"></span>
+                    </details>
+
+                    <!-- BORDER : CLIQUE -->
+                    <details class="det_in">
+                        <summary>
+                            Bordure global<input type="checkbox" id="border_active" name="border"/>
+                        </summary>
+                        <div>
+                            <div>
+                                <h3>Bordure de base</h3>
+                            </div>
+                            <div>
+                                <select id="type_border_active" name="border">
+                                    <option value="solid">Solid</option>
+                                    <option value="dashed">Dashed</option>
+                                    <option value="dotted">Dotted</option>
+                                    <option value="double">Double</option>
+                                    <option value="groove">Groove</option>
+                                    <option value="ridge">Ridge</option>
+                                    <option value="inset">Inset</option>
+                                    <option value="outset">Outset</option>
+                                    <option value="none">None</option>
+                                    <option value="hidden">Hidden</option>
+                                </select>
+                            </div>
+                            <input id="jauge_border_active" name="border" type="range" min="0" max="100" value="2">
+                            <br>
+                            <input type="color" id="border_color_active" name="border-color" value="#ff0000">
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Bordure coin</h3>
+                            </div>
+                            <p>En haut à gauche <input id="border_radius_top_left_active" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                            <p>En haut à droite <input id="border_radius_top_right_active" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                            <p>En bas à droite <input id="border_radius_bottom_right_active" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                            <p>En bas à gauche <input id="border_radius_bottom_left_active" name="border-radius" type="range" min="0" max="100" value="0"></p>
+                        </div>
+                    </details>
+
+                    <!-- COLOR : CLIQUE -->
+                    <details class="det_in">
+                        <summary>
+                            Couleur
+                        </summary>
+                        <!-- WIDTH -->
+                        <h3>Fond</h3>
+                        <input type="color" id="background-color_active" name="background-color" value="#f2f2f2">
+
+                        <!-- HEIGHT -->
+                        <h3>Texte</h3>
+                        <input type="color" id="text-color_active" name="color" value="black">
+                    </details>
+                </details>
             </div>
         </div>
 
         <div class="box2">
-            <div id="button_centre">Test</div>
+            <div id="button_centre">Texte</div>
         </div>
     </div>
 
@@ -185,6 +259,11 @@
 <script src="./js/hover/taille.js"></script>
 <script src="./js/hover/border.js"></script>
 <script src="./js/hover/color.js"></script>
+
+<!-- ACTIVE -->
+<script src="./js/active/taille.js"></script>
+<script src="./js/active/border.js"></script>
+<script src="./js/active/color.js"></script>
 
 <script src="./js/copy.js"></script>
 <script src="./js/init.js"></script>
