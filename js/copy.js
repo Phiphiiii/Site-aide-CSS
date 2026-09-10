@@ -2,8 +2,8 @@ const button_css = document.getElementById("button_css");
 
 function CSS_base() {
     let tailleCSS =
-        "\t" + range_width.name + ": " + range_width.value + " ;\n" +
-        "\t" + range_height.name + ": " + range_height.value + " ;\n";
+        "\t" + range_width.name + ": " + range_width.value * 5 + "px ;\n" +
+        "\t" + range_height.name + ": " + range_height.value * 5 + "px ;\n";
 
     let borderCSS = "";
     if (border.checked) {
@@ -28,8 +28,8 @@ function CSS_base() {
 function CSS_hover() {
     if (hover.checked && action.checked) {
         let tailleCSS_hover =
-            "\t" + range_width_hover.name + ": " + range_width_hover.value + " ;\n" +
-            "\t" + range_height_hover.name + ": " + range_height_hover.value + " ;\n";
+            "\t" + range_width_hover.name + ": " + range_width_hover.value * 5 + "px ;\n" +
+            "\t" + range_height_hover.name + ": " + range_height_hover.value * 5 + "px ;\n";
 
         let borderCSS_hover = "";
         if (border_hover.checked) {
@@ -58,8 +58,8 @@ function CSS_hover() {
 function CSS_active() {
     if (active.checked && action.checked) {
         let tailleCSS_active =
-            "\t" + range_width_active.name + ": " + range_width_active.value + " ;\n" +
-            "\t" + range_height_active.name + ": " + range_height_active.value + " ;\n";
+            "\t" + range_width_active.name + ": " + range_width_active.value * 5 + "px ;\n" +
+            "\t" + range_height_active.name + ": " + range_height_active.value * 5 + "px ;\n";
 
         let borderCSS_active = "";
         if (border_active.checked) {
