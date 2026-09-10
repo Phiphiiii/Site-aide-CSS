@@ -8,13 +8,6 @@
     width: 20%;
 }
 
-.box2 {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .det_out {
     margin: 10px 0;
 }
@@ -53,7 +46,7 @@ summary {
 
 #button_action {
     position: fixed;
-    top: 10px;
+    top: 0px;
     right: 20px;
     font-size: 18px;
     font-weight: bold;

@@ -14,3 +14,24 @@ function actionShow() {
 }
 
 action.addEventListener("change", actionShow);
+
+// AIDE DE L'IA
+
+function moveButton(e) {
+    console.log("x =", e.clientX, "y =", e.clientY);
+
+    function followMouse(ev) {
+        bouton.style.top = ev.pageY + "px";
+        bouton.style.left = ev.pageX + "px";
+        bouton.style.cursor = "grab";
+    }
+
+    document.addEventListener('mousemove', followMouse);
+
+    document.addEventListener('mouseup', function stop() {
+        document.removeEventListener('mousemove', followMouse);
+        document.removeEventListener('mouseup', stop);
+    });
+}
+
+bouton.addEventListener('mousedown', moveButton);
