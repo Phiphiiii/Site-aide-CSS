@@ -17,21 +17,31 @@ action.addEventListener("change", actionShow);
 
 // AIDE DE L'IA
 
+const elements = [
+    document.getElementById("base"),
+    document.getElementById("hover"),
+    document.getElementById("active"),
+    bouton
+];
+
 function moveButton(e) {
-    console.log("x =", e.clientX, "y =", e.clientY);
+    const element = e.currentTarget;
 
     function followMouse(ev) {
-        bouton.style.top = ev.pageY + "px";
-        bouton.style.left = ev.pageX + "px";
-        bouton.style.cursor = "grab";
+        element.style.position = "fixed";
+        element.style.top = ev.pageY + "px";
+        element.style.left = ev.pageX + "px";
+        element.style.cursor = "grab";
     }
 
-    document.addEventListener('mousemove', followMouse);
+    document.addEventListener("mousemove", followMouse);
 
-    document.addEventListener('mouseup', function stop() {
-        document.removeEventListener('mousemove', followMouse);
-        document.removeEventListener('mouseup', stop);
+    document.addEventListener("mouseup", function stop() {
+        document.removeEventListener("mousemove", followMouse);
+        document.removeEventListener("mouseup", stop);
     });
 }
 
-bouton.addEventListener('mousedown', moveButton);
+elements.forEach(element => {
+    element.addEventListener("mousedown", moveButton);
+});
